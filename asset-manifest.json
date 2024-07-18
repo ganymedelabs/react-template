@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-template/static/css/main.12b78437.css",
+    "main.js": "/react-template/static/js/main.498040ae.js",
+    "service-worker.js": "/react-template/service-worker.js",
+    "index.html": "/react-template/index.html",
+    "main.12b78437.css.map": "/react-template/static/css/main.12b78437.css.map",
+    "main.498040ae.js.map": "/react-template/static/js/main.498040ae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12b78437.css",
+    "static/js/main.498040ae.js"
+  ]
+}
