@@ -2,7 +2,7 @@
     "homepage": "https://discontinuedlabs.github.io/react-template",
     "name": "react-template",
     "author": "discontinuedlabs",
-    "description": "",
+    "description": "This is a React template created with Create React App (CRA) and configured with TypeScript, TailwindCSS, ESLint, Prettier, Docker, and PWA support using Workbox. It is ready to be deployed on GitHub Pages and is set up to enforce code quality and styling guidelines.",
     "license": "MIT",
     "version": "0.1.0",
     "private": true,
