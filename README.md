@@ -52,21 +52,33 @@ This will start the development server at `http://localhost:3000`.
 
 In the project directory, you can run:
 
-### `npm start` or `yarn start`
+### `npm run start` or `yarn start`
 
 Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm run build` or `yarn build`
 
-Builds the app for production to the `build` folder.
+Builds the app for production to the `dist` folder.
 
 ### `npm run lint` or `yarn lint`
 
 Lints the project using ESLint.
 
-### `npm run format` or `yarn format`
+### `npm run lint:fix` or `yarn lint:fix`
 
-Formats the code using Prettier.
+Lints the project and automatically fixes problems using ESLint.
+
+### `npm run test` or `yarn test`
+
+Runs the tests using Jest.
+
+### `npm run coverage` or `yarn coverage`
+
+Runs the tests and generates a coverage report.
+
+### `npm run eject` or `yarn eject`
+
+Ejects the CRA configuration. **Note: This is a one-way operation. Once you `eject`, you can't go back!**
 
 ### `npm run deploy` or `yarn deploy`
 
@@ -76,6 +88,7 @@ Deploys the app to GitHub Pages.
 
 This project uses the following ESLint configurations:
 
+-   `eslint:recommended`
 -   `plugin:react/recommended`
 -   `plugin:@typescript-eslint/recommended`
 -   `airbnb`
