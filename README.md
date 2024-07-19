@@ -60,10 +60,6 @@ Runs the app in the development mode. Open [http://localhost:3000](http://localh
 
 Builds the app for production to the `dist` folder.
 
-### `npm run serve` or `yarn serve`
-
-Serves the built app in the `dist` folder.
-
 ### `npm run lint` or `yarn lint`
 
 Lints the project using ESLint.
@@ -80,6 +76,10 @@ Runs the tests using Jest.
 
 Runs the tests and generates a coverage report.
 
+### `npm run eject` or `yarn eject`
+
+Ejects the CRA configuration. **Note: This is a one-way operation. Once you `eject`, you can't go back!**
+
 ### `npm run deploy` or `yarn deploy`
 
 Deploys the app to GitHub Pages.
@@ -88,6 +88,7 @@ Deploys the app to GitHub Pages.
 
 This project uses the following ESLint configurations:
 
+-   `eslint:recommended`
 -   `plugin:react/recommended`
 -   `plugin:@typescript-eslint/recommended`
 -   `airbnb`
