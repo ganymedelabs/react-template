@@ -2,7 +2,7 @@
 
 This is a React template created with Create React App (CRA) and configured with TypeScript, TailwindCSS, ESLint, Prettier, Docker, and PWA support using Workbox. It is ready to be deployed on GitHub Pages and is set up to enforce code quality and styling guidelines.
 
-## Table of Contents 📚
+📚 ## Table of Contents
 
 -   [Getting Started](#getting-started)
 -   [Available Scripts](#available-scripts)
@@ -13,7 +13,7 @@ This is a React template created with Create React App (CRA) and configured with
 -   [Deployment](#deployment)
 -   [License](#license)
 
-## Getting Started 🚀
+🚀 ## Getting Started
 
 ### Prerequisites
 
@@ -48,7 +48,7 @@ yarn start
 
 This will start the development server at `http://localhost:3000`.
 
-## Available Scripts 📄
+📃 ## Available Scripts
 
 In the project directory, you can run:
 
@@ -84,7 +84,7 @@ Ejects the CRA configuration. **Note: This is a one-way operation. Once you `eje
 
 Deploys the app to GitHub Pages.
 
-## ESLint Configuration 🔧
+🔍 ## ESLint Configuration
 
 This project uses the following ESLint configurations:
 
@@ -98,11 +98,11 @@ This project uses the following ESLint configurations:
 
 You can find the ESLint configuration in the `.eslintrc` file.
 
-## Prettier Configuration 🎨
+🎨 ## Prettier Configuration
 
 Prettier is used for code formatting. You can find the configuration in the `.prettierrc` file.
 
-## Docker Configuration 🐳
+🐳 ## Docker Configuration
 
 This project includes a `Dockerfile` for containerizing the application. The Dockerfile uses `node:18-alpine` as the base image. To build and run the Docker container, use the following commands:
 
@@ -111,11 +111,11 @@ docker build -t react-template .
 docker run -p 3000:3000 react-template
 ```
 
-## PWA Configuration 📱
+📱 ## PWA Configuration
 
 This project is configured as a Progressive Web App using Workbox. The service worker is generated during the build process.
 
-## Deployment 🚢
+🚢 ## Deployment
 
 This project is configured to be deployed to GitHub Pages. To deploy, run:
 
@@ -127,6 +127,6 @@ yarn deploy
 
 Make sure to update the `homepage` field in `package.json` to match your repository URL.
 
-## License 📜
+📜 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
