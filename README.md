@@ -53,35 +53,35 @@ This will start the development server at `http://localhost:3000`.
 
 In the project directory, you can run:
 
-### `npm run start` or `yarn start`
+1. `npm run start` or `yarn start`
 
 Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm run build` or `yarn build`
+2. `npm run build` or `yarn build`
 
 Builds the app for production to the `dist` folder.
 
-### `npm run lint` or `yarn lint`
+3. `npm run lint` or `yarn lint`
 
 Lints the project using ESLint.
 
-### `npm run lint:fix` or `yarn lint:fix`
+4. `npm run lint:fix` or `yarn lint:fix`
 
 Lints the project and automatically fixes problems using ESLint.
 
-### `npm run test` or `yarn test`
+5. `npm run test` or `yarn test`
 
 Runs the tests using Jest.
 
-### `npm run coverage` or `yarn coverage`
+6. `npm run coverage` or `yarn coverage`
 
 Runs the tests and generates a coverage report.
 
-### `npm run eject` or `yarn eject`
+7. `npm run eject` or `yarn eject`
 
 Ejects the CRA configuration. **Note: This is a one-way operation. Once you `eject`, you can't go back!**
 
-### `npm run deploy` or `yarn deploy`
+8. `npm run deploy` or `yarn deploy`
 
 Deploys the app to GitHub Pages.
 
