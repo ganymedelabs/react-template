@@ -11,6 +11,7 @@ This is a React template created with Create React App (CRA) and configured with
 -   [Docker Configuration](#docker-configuration)
 -   [PWA Configuration](#pwa-configuration)
 -   [Deployment](#deployment)
+-   [Repository Configuration](#repository-configuration)
 -   [License](#license)
 
 ## Getting Started
@@ -126,6 +127,79 @@ yarn deploy
 ```
 
 Make sure to update the `homepage` field in `package.json` to match your repository URL.
+
+## Repository Configuration
+
+To make this template work for your repository, you need to update a few configuration files:
+
+1. **package.json**
+    - Change the `homepage` URL to the GitHub Pages URL of your repository.
+
+    ```json
+    "homepage": "https://your-username.github.io/your-repo-name/"
+    ```
+
+2. **public/manifest.json**
+    - Change all instances of `"react-template"` to the name of your repository. If your GitHub Pages URL is `https://your-username.github.io/`, leave the `"react-template"` string as `"/"`.
+
+    ```json
+    "icons": [
+        {
+            "src": "/your-repo-name/favicon.ico",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        }
+    ],
+    "start_url": "/your-repo-name/",
+    "scope": "/your-repo-name/",
+    ```
+
+3. **public/index.html**
+    - Change the `href` value of `<link rel="canonical" href="https://discontinuedlabs.github.io/react-template/" />` to the URL of your GitHub Pages.
+
+    ```html
+    <link rel="canonical" href="https://your-username.github.io/your-repo-name/" />
+    ```
+
+    - Replace all instances of `"react-template"` in `href` values to your repository name. If your GitHub Pages URL is `https://your-username.github.io/`, leave the `"react-template"` string as `"/"`.
+
+    ```html
+    <link rel="manifest" href="/your-repo-name/manifest.json" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/your-repo-name/images/favicons/apple-touch-icon.png" />
+    ```
+
+Additionally, while not required for the template to work, it's a good idea to change the following parts in the `package.json` as needed:
+
+```json
+"name": "react-template",
+"author": "discontinuedlabs",
+"description": "This is a React template created with Create React App (CRA) and configured with TypeScript, TailwindCSS, ESLint, Prettier, Docker, and PWA support using Workbox. It is ready to be deployed on GitHub Pages and is set up to enforce code quality and styling guidelines.",
+"license": "MIT",
+"version": "1.0.0",
+"private": true,
+"repository": {
+    "type": "git",
+    "url": "https://github.com/discontinuedlabs/react-template.git"
+},
+"keywords": [
+    "PWA",
+    "Progressive Web App",
+    "Open Source",
+    "MIT",
+    "React",
+    "Create React App",
+    "TypeScript",
+    "GitHub Pages",
+    "Docker",
+    "Tailwind CSS",
+    "ESLint",
+    "Prettier",
+    "Template"
+],
+"bugs": {
+    "url": "https://github.com/discontinuedlabs/react-template/issues"
+}
+```
 
 ## License
 
