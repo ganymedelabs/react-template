@@ -4,10 +4,12 @@ const isLocalhost = Boolean(
         window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
 );
 
+// Register the service worker
 function registerValidSW(swUrl, config) {
     navigator.serviceWorker
         .register(swUrl)
         .then((registration) => {
+            // When an update is found
             // eslint-disable-next-line no-param-reassign
             registration.onupdatefound = () => {
                 const installingWorker = registration.installing;
@@ -17,6 +19,7 @@ function registerValidSW(swUrl, config) {
                 installingWorker.onstatechange = () => {
                     if (installingWorker.state === "installed") {
                         if (navigator.serviceWorker.controller) {
+                            // New content is available
                             console.log(
                                 "New content is available and will be used when all " +
                                     "tabs for this page are closed. See https://cra.link/PWA."
@@ -26,6 +29,7 @@ function registerValidSW(swUrl, config) {
                                 config.onUpdate(registration);
                             }
                         } else {
+                            // Content is cached for offline use
                             console.log("Content is cached for offline use.");
 
                             if (config && config.onSuccess) {
@@ -41,6 +45,7 @@ function registerValidSW(swUrl, config) {
         });
 }
 
+// Check if the service worker is valid
 function checkValidServiceWorker(swUrl, config) {
     fetch(swUrl, {
         headers: { "Service-Worker": "script" },
@@ -48,12 +53,14 @@ function checkValidServiceWorker(swUrl, config) {
         .then((response) => {
             const contentType = response.headers.get("content-type");
             if (response.status === 404 || (contentType != null && contentType.indexOf("javascript") === -1)) {
+                // Service worker not found, reload the page
                 navigator.serviceWorker.ready.then((registration) => {
                     registration.unregister().then(() => {
                         window.location.reload();
                     });
                 });
             } else {
+                // Register the service worker
                 registerValidSW(swUrl, config);
             }
         })
@@ -62,6 +69,7 @@ function checkValidServiceWorker(swUrl, config) {
         });
 }
 
+// Register the service worker if in production environment
 export function register(config) {
     if (process.env.NODE_ENV === "production" && "serviceWorker" in navigator) {
         const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
@@ -73,6 +81,7 @@ export function register(config) {
             const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
 
             if (isLocalhost) {
+                // Check if the service worker is valid in localhost
                 checkValidServiceWorker(swUrl, config);
 
                 navigator.serviceWorker.ready.then(() => {
@@ -81,12 +90,14 @@ export function register(config) {
                     );
                 });
             } else {
+                // Register the service worker in production
                 registerValidSW(swUrl, config);
             }
         });
     }
 }
 
+// Unregister the service worker
 export function unregister() {
     if ("serviceWorker" in navigator) {
         navigator.serviceWorker.ready
