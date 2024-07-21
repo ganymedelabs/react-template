@@ -55,35 +55,35 @@ In the project directory, you can run:
 
 1. `npm run start` or `yarn start`
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    - Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 2. `npm run build` or `yarn build`
 
-Builds the app for production to the `dist` folder.
+    - Builds the app for production to the `dist` folder.
 
 3. `npm run lint` or `yarn lint`
 
-Lints the project using ESLint.
+    - Lints the project using ESLint.
 
 4. `npm run lint:fix` or `yarn lint:fix`
 
-Lints the project and automatically fixes problems using ESLint.
+    - Lints the project and automatically fixes problems using ESLint.
 
 5. `npm run test` or `yarn test`
 
-Runs the tests using Jest.
+    - Runs the tests using Jest.
 
 6. `npm run coverage` or `yarn coverage`
 
-Runs the tests and generates a coverage report.
+    - Runs the tests and generates a coverage report.
 
 7. `npm run eject` or `yarn eject`
 
-Ejects the CRA configuration. **Note: This is a one-way operation. Once you `eject`, you can't go back!**
+    - Ejects the CRA configuration. **Note: This is a one-way operation. Once you `eject`, you can't go back!**
 
 8. `npm run deploy` or `yarn deploy`
 
-Deploys the app to GitHub Pages.
+    - Deploys the app to GitHub Pages.
 
 ## ESLint Configuration
 
