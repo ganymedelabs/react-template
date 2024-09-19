@@ -76,8 +76,8 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "lint": "npx eslint .",
-        "lint:fix": "npx eslint --fix .",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
         "coverage": "npm test --coverage --watchAll --collectCoverageFrom='src/**/*.{js,ts,jsx,tsx}'"
     },
     "eslintConfig": {
