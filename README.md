@@ -141,13 +141,23 @@ Make sure to update the `homepage` field in `package.json` to match your reposit
 To make this template work for your repository, you need to update a few configuration files:
 
 1. **package.json**
+
     - Change the `homepage` URL to the GitHub Pages URL of your repository.
 
     ```json
-    "homepage": "https://your-username.github.io/your-repo-name/"
+    "homepage": "https://your-username.github.io/your-repo-name"
     ```
 
-2. **public/manifest.json**
+2. **src/index.tsx**
+
+    - Change the `basename` value of <Router basename="/react-template"> to the name of your repository.
+
+    ```jsx
+    <Router basename="/your-repo-name">
+    ```
+
+3. **public/manifest.json**
+
     - Change all instances of `"react-template"` to the name of your repository. If your GitHub Pages URL is `https://your-username.github.io/`, leave the `"react-template"` string as `"/"`.
 
     ```json
@@ -162,7 +172,8 @@ To make this template work for your repository, you need to update a few configu
     "scope": "/your-repo-name/",
     ```
 
-3. **public/index.html**
+4. **public/index.html**
+
     - Change the `href` value of `<link rel="canonical" href="https://discontinuedlabs.github.io/react-template/" />` to the URL of your GitHub Pages.
 
     ```html
