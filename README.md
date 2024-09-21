@@ -146,7 +146,7 @@ To make this template work for your repository, you need to update a few configu
     - Change the `homepage` URL to the GitHub Pages URL of your repository.
 
     ```json
-    "homepage": "https://your-username.github.io/your-repo-name"
+    "homepage": "https://your-username.github.io/your-repo-name/"
     ```
 
 2. **src/index.tsx**
