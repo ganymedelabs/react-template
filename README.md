@@ -209,6 +209,7 @@ Additionally, while not required for the template to work, it's a good idea to c
     "Create React App",
     "TypeScript",
     "GitHub Pages",
+    "BrowserRouter",
     "Docker",
     "Tailwind CSS",
     "ESLint",
