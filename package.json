@@ -1,5 +1,5 @@
 {
-    "homepage": "https://discontinuedlabs.github.io/react-template",
+    "homepage": "https://discontinuedlabs.github.io/react-template/",
     "name": "react-template",
     "author": "discontinuedlabs",
     "description": "This is a React template created with Create React App (CRA) and configured with TypeScript, TailwindCSS, ESLint, Prettier, Docker, and PWA support using Workbox. It is ready to be deployed on GitHub Pages and is compatible with BrowserRouter, allowing seamless URL routing.",
