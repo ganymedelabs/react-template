@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./Home.tsx";
-import NotFoundPage from "./NotFoundPage.tsx";
+import Home from "./components/Home.tsx";
+import NotFoundPage from "./components/NotFoundPage.tsx";
 
 export default function App() {
     return (

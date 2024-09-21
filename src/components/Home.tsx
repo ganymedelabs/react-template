@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "./components/Image.tsx";
+import Image from "./Image.tsx";
 
 /* eslint-disable prettier/prettier */
 
