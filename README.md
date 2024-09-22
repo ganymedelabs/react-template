@@ -5,7 +5,8 @@
 ![TypeScript version](https://img.shields.io/badge/TypeScript-5.5.3-3178C6?logo=typescript&logoColor=white)
 ![ESLint version](https://img.shields.io/badge/ESLint-8.57.0-4B32C3?logo=eslint&logoColor=white)
 ![Prettier version](https://img.shields.io/badge/Prettier-3.3.2-F7B93E?logo=prettier&logoColor=white)
-![PWA Support](https://img.shields.io/badge/PWA-Support-4FC08D?logo=workbox&logoColor=white)
+![PWA Support](https://img.shields.io/badge/PWA-Support-4FC08D?logo=pwa&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Available-2496ED?logo=docker&logoColor=white)
 ![GitHub Pages](https://img.shields.io/github/deployments/discontinuedlabs/react-template/github-pages?label=GitHub%20Pages&color=brightgreen&logo=github&logoColor=white)
 ![BrowserRouter](https://img.shields.io/badge/Router-BrowserRouter-CA4245?logo=reactrouter&logoColor=white)
 
@@ -14,7 +15,8 @@ This is a React template created with Create React App (CRA) and configured with
 ## Table of Contents
 
 -   [Getting Started](#getting-started)
--   [Available Scripts](#available-scripts)
+-   [TypeScript Configuration](#typescript-configuration)
+-   [TailwindCSS Configuration](#tailwindcss-configuration)
 -   [ESLint Configuration](#eslint-configuration)
 -   [Prettier Configuration](#prettier-configuration)
 -   [Docker Configuration](#docker-configuration)
@@ -58,41 +60,13 @@ yarn start
 
 This will start the development server at `http://localhost:3000`.
 
-## Available Scripts
+## TypeScript Configuration
 
-In the project directory, you can run:
+This template uses TypeScript for static type-checking and ensuring type safety. You can find the configuration in the `tsconfig.json` file.
 
-1. `npm run start` or `yarn start`
+## TailwindCSS Configuration
 
-    - Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-2. `npm run build` or `yarn build`
-
-    - Builds the app for production to the `dist` folder.
-
-3. `npm run lint` or `yarn lint`
-
-    - Lints the project using ESLint.
-
-4. `npm run lint:fix` or `yarn lint:fix`
-
-    - Lints the project and automatically fixes problems using ESLint.
-
-5. `npm run test` or `yarn test`
-
-    - Runs the tests using Jest.
-
-6. `npm run coverage` or `yarn coverage`
-
-    - Runs the tests and generates a coverage report.
-
-7. `npm run eject` or `yarn eject`
-
-    - Ejects the CRA configuration. **Note: This is a one-way operation. Once you `eject`, you can't go back!**
-
-8. `npm run deploy` or `yarn deploy`
-
-    - Deploys the app to GitHub Pages.
+TailwindCSS is used for utility-first styling. It is configured with Just-in-Time (JIT) mode for optimized builds. You can find the configuration in the `tailwind.config.js` file.
 
 ## ESLint Configuration
 
