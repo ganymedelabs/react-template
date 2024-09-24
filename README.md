@@ -252,6 +252,8 @@ Unlike many GitHub Pages setups that require the use of `HashRouter` due to URL 
    ```html
    <link rel="canonical" href="https://discontinuedlabs.github.io/react-template/" />
    <link rel="apple-touch-icon" sizes="180x180" href="/react-template/images/favicons/apple-touch-icon.png" />
+   <link rel="icon" type="image/png" sizes="32x32" href="/react-template/images/favicons/favicon-32x32.png" />
+   <link rel="icon" type="image/png" sizes="16x16" href="/react-template/images/favicons/favicon-16x16.png" />
    ```
 7. If your deployment platform supports `BrowserRouter` without special configuration, delete `404.html` and remove the "Single Page Apps for GitHub Pages" script from `index.html`:
    ```html
