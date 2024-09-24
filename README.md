@@ -64,33 +64,34 @@ This will start the development server at `http://localhost:3000`.
 
 This template uses TypeScript for static type-checking and ensuring type safety. You can find the configuration in the `tsconfig.json` file.
 
-### Removing TypeScript
-
-1. Convert all `.tsx` files to `.jsx` and `.ts` files to `.js`.
-2. Delete the `tsconfig.json` file.
-3. Uninstall TypeScript and its related packages:
-   ```bash
-   npm uninstall typescript @types/react @types/react-dom @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser
-   ```
-4. Remove TypeScript from the `"overrides"` field in `package.json`:
-   ```json
-   "overrides": {
-       "typescript": "^5.5.3"
-   }
-   ```
-5. Remove TypeScript references from the `"plugins"` and `"extends"` fields in the `.eslintrc` configuration:
-   ```json
-   "plugins": ["react", "import", "jsx-a11y", "prettier", "@typescript-eslint"],
-   "extends": [
-       "eslint:recommended",
-       "plugin:react/recommended",
-       "plugin:@typescript-eslint/recommended",
-       "airbnb",
-       "plugin:import/errors",
-       "plugin:jsx-a11y/recommended",
-       "plugin:prettier/recommended"
-   ],
-   ```
+> [!CAUTION]
+> ### Removing TypeScript
+> 
+> 1. Convert all `.tsx` files to `.jsx` and `.ts` files to `.js`.
+> 2. Delete the `tsconfig.json` file.
+> 3. Uninstall TypeScript and its related packages:
+>    ```bash
+>    npm uninstall typescript @types/react @types/react-dom @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser
+>    ```
+> 4. Remove TypeScript from the `"overrides"` field in `package.json`:
+>    ```json
+>    "overrides": {
+>        "typescript": "^5.5.3"
+>    }
+>    ```
+> 5. Remove TypeScript references from the `"plugins"` and `"extends"` fields in the `.eslintrc` configuration:
+>    ```json
+>    "plugins": ["react", "import", "jsx-a11y", "prettier", "@typescript-eslint"],
+>    "extends": [
+>        "eslint:recommended",
+>        "plugin:react/recommended",
+>        "plugin:@typescript-eslint/recommended",
+>        "airbnb",
+>        "plugin:import/errors",
+>        "plugin:jsx-a11y/recommended",
+>        "plugin:prettier/recommended"
+>    ]
+>    ```
 
 ## TailwindCSS Configuration
 
