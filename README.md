@@ -206,25 +206,17 @@ This project is configured as a Progressive Web App using Workbox. The service w
 
 ### Removing PWA Support
 
-1. Delete `service-worker.js`, `manifest.json`, `favicon.ico`, and the `public/images/favicons` folder.
+1. Delete `service-worker.js`, `serviceWorkerRegistration.js`, `manifest.json`, `favicon.ico`, and the `public/images/favicons` folder.
 2. Remove the service worker registration code from `index.tsx`:
    ```tsx
-   if ("serviceWorker" in navigator) {
-       navigator.serviceWorker
-           .register(`${import.meta.env.VITE_PUBLIC_URL}/service-worker.js`, { type: "module" })
-           .then((registration) => {
-               console.log("Service Worker registered with scope:", registration.scope);
-           })
-           .catch((error) => {
-               console.error("Service Worker registration failed:", error);
-           });
-   }
+   import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+   serviceWorkerRegistration.register();
    ```
 3. Remove favicon link tags from `index.html`:
    ```html
-   <link rel="apple-touch-icon" sizes="180x180" href="/react-vite-template/images/favicons/apple-touch-icon.png" />
-   <link rel="icon" type="image/png" sizes="32x32" href="/react-vite-template/images/favicons/favicon-32x32.png" />
-   <link rel="icon" type="image/png" sizes="16x16" href="/react-vite-template/images/favicons/favicon-16x16.png" />
+   <link rel="apple-touch-icon" sizes="180x180" href="/react-template/images/favicons/apple-touch-icon.png" />
+   <link rel="icon" type="image/png" sizes="32x32" href="/react-template/images/favicons/favicon-32x32.png" />
+   <link rel="icon" type="image/png" sizes="16x16" href="/react-template/images/favicons/favicon-16x16.png" />
    ```
 
 ## GitGub Pages Deployment
@@ -252,28 +244,14 @@ Unlike many GitHub Pages setups that require the use of `HashRouter` due to URL 
        "deploy": "gh-pages -d build"
    }
    ```
-3. Adjust or remove the `base` property in `vite.config.js`:
-   ```javascript
-   base: "/react-vite-template/"
-   ```
-4. Remove or modify the `VITE_PUBLIC_URL` in `.env.development` and `.env.production`:
-   ```env
-   # .env.development
-   VITE_PUBLIC_URL=http://localhost:3000/react-vite-template/
-
-   # .env.production
-   VITE_PUBLIC_URL=https://discontinuedlabs.github.io/react-vite-template/
-   ```
-5. Update the `Router` component's `basename` property in `index.tsx`:
+3. Update the `Router` component's `basename` property in `index.tsx`:
    ```jsx
-   <Router basename="/react-vite-template/">
+   <Router basename="/react-template/">
    ```
-6. Remove or update all `href` attributes in `index.html`:
+4. Remove or update all `href` attributes in `index.html`:
    ```html
-   <link rel="canonical" href="https://discontinuedlabs.github.io/react-vite-template/" />
-   <link rel="apple-touch-icon" sizes="180x180" href="/react-vite-template/images/favicons/apple-touch-icon.png" />
-   <link rel="icon" type="image/png" sizes="32x32" href="/react-vite-template/images/favicons/favicon-32x32.png" />
-   <link rel="icon" type="image/png" sizes="16x16" href="/react-vite-template/images/favicons/favicon-16x16.png" />
+   <link rel="canonical" href="https://discontinuedlabs.github.io/react-template/" />
+   <link rel="apple-touch-icon" sizes="180x180" href="/react-template/images/favicons/apple-touch-icon.png" />
    ```
 7. If your deployment platform supports `BrowserRouter` without special configuration, delete `404.html` and remove the "Single Page Apps for GitHub Pages" script from `index.html`:
    ```html
