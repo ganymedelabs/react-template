@@ -140,7 +140,7 @@ You can find the ESLint configuration in the `.eslintrc` file.
 1. Delete the `.eslintrc` and `.eslintignore` files.
 2. Uninstall ESLint and associated plugins:
    ```bash
-   npm uninstall eslint @eslint/js @typescript-eslint/parser eslint-config-airbnb eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks vite-plugin-eslint
+   npm uninstall eslint @eslint/js @typescript-eslint/parser eslint-config-airbnb eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks
    ```
 3. Remove the `"lint"` and `"lint:fix"` scripts, along with the `"eslintConfig"` field from `package.json`:
    ```json
@@ -154,14 +154,6 @@ You can find the ESLint configuration in the `.eslintrc` file.
            "react-app/jest"
        ]
    }
-   ```
-4. Remove ESLint configurations from `vite.config.js`:
-   ```javascript
-   import eslint from "vite-plugin-eslint";
-
-   export default defineConfig(() => ({
-       plugins: [react(), eslint()],
-   }));
    ```
 
 ## Prettier Configuration
