@@ -81,16 +81,8 @@ This template uses TypeScript for static type-checking and ensuring type safety.
 >    ```
 > 5. Remove TypeScript references from the `"plugins"` and `"extends"` fields in the `.eslintrc` configuration:
 >    ```json
->    "plugins": ["react", "import", "jsx-a11y", "prettier", "@typescript-eslint"],
->    "extends": [
->        "eslint:recommended",
->        "plugin:react/recommended",
->        "plugin:@typescript-eslint/recommended",
->        "airbnb",
->        "plugin:import/errors",
->        "plugin:jsx-a11y/recommended",
->        "plugin:prettier/recommended"
->    ]
+>    "plugins": ["@typescript-eslint"],
+>    "extends": ["plugin:@typescript-eslint/recommended"]
 >    ```
 
 ## TailwindCSS Configuration
@@ -179,16 +171,8 @@ Prettier is used for code formatting. You can find the configuration in the `.pr
 >    ```
 > 4. Remove Prettier references from the `"plugins"` and `"extends"` fields in the `.eslintrc` configuration:
 >    ```json
->    "plugins": ["react", "import", "jsx-a11y", "prettier", "@typescript-eslint"],
->    "extends": [
->        "eslint:recommended",
->        "plugin:react/recommended",
->        "plugin:@typescript-eslint/recommended",
->        "airbnb",
->        "plugin:import/errors",
->        "plugin:jsx-a11y/recommended",
->        "plugin:prettier/recommended"
->    ],
+>    "plugins": ["prettier"],
+>    "extends": ["plugin:prettier/recommended"]
 >    ```
 
 ## Docker Configuration
@@ -223,8 +207,6 @@ This project is configured as a Progressive Web App using Workbox. The service w
 > 3. Remove favicon link tags from `index.html`:
 >    ```html
 >    <link rel="apple-touch-icon" sizes="180x180" href="/react-template/images/favicons/apple-touch-icon.png" />
->    <link rel="icon" type="image/png" sizes="32x32" href="/react-template/images/favicons/favicon-32x32.png" />
->    <link rel="icon" type="image/png" sizes="16x16" href="/react-template/images/favicons/favicon-16x16.png" />
 >    ```
 
 ## GitHub Pages Deployment
@@ -261,8 +243,6 @@ Unlike many GitHub Pages setups that require the use of `HashRouter` due to URL 
 >    ```html
 >    <link rel="canonical" href="https://discontinuedlabs.github.io/react-template/" />
 >    <link rel="apple-touch-icon" sizes="180x180" href="/react-template/images/favicons/apple-touch-icon.png" />
->    <link rel="icon" type="image/png" sizes="32x32" href="/react-template/images/favicons/favicon-32x32.png" />
->    <link rel="icon" type="image/png" sizes="16x16" href="/react-template/images/favicons/favicon-16x16.png" />
 >    ```
 > 5. If your deployment platform supports `BrowserRouter` without special configuration, delete `404.html` and remove the "Single Page Apps for GitHub Pages" script from `index.html`:
 >    ```html
