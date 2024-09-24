@@ -219,7 +219,7 @@ This project is configured as a Progressive Web App using Workbox. The service w
    <link rel="icon" type="image/png" sizes="16x16" href="/react-template/images/favicons/favicon-16x16.png" />
    ```
 
-## GitGub Pages Deployment
+## GitHub Pages Deployment
 
 This project is configured to be deployed to GitHub Pages. To deploy, run:
 
