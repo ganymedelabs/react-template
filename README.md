@@ -14,41 +14,41 @@ This is a React template created with Create React App (CRA) and configured with
 
 ## Table of Contents
 
--   [Getting Started](#getting-started)
--   [TypeScript Configuration](#typescript-configuration)
--   [TailwindCSS Configuration](#tailwindcss-configuration)
--   [ESLint Configuration](#eslint-configuration)
--   [Prettier Configuration](#prettier-configuration)
--   [Docker Configuration](#docker-configuration)
--   [PWA Configuration](#pwa-configuration)
--   [GitHub Pages Deployment](#github-pages-deployment)
--   [Repository Configuration](#repository-configuration)
--   [License](#license)
+- [Getting Started](#getting-started)
+- [TypeScript Configuration](#typescript-configuration)
+- [TailwindCSS Configuration](#tailwindcss-configuration)
+- [ESLint Configuration](#eslint-configuration)
+- [Prettier Configuration](#prettier-configuration)
+- [Docker Configuration](#docker-configuration)
+- [PWA Configuration](#pwa-configuration)
+- [GitHub Pages Deployment](#github-pages-deployment)
+- [Repository Configuration](#repository-configuration)
+- [License](#license)
 
 ## Getting Started
 
 ### Prerequisites
 
--   Node.js (>= 12.x)
--   npm or yarn
--   Docker (optional, for containerization)
+- Node.js (>= 12.x)
+- npm or yarn
+- Docker (optional, for containerization)
 
 ### Installation
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/your-username/react-template.git
-cd react-template
-```
+   ```bash
+   git clone https://github.com/your-username/react-template.git
+   cd react-template
+   ```
 
 2. Install dependencies:
 
-```bash
-npm install
-# or
-yarn install
-```
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
 ### Running the Development Server
 
@@ -97,96 +97,99 @@ This template uses TypeScript for static type-checking and ensuring type safety.
 
 TailwindCSS is used for utility-first styling. It is configured with Just-in-Time (JIT) mode for optimized builds. You can find the configuration in the `tailwind.config.js` file.
 
-### Removing TailwindCSS
-
-1. Delete the `tailwind.config.js` and `postcss.config.js` files.
-2. Uninstall TailwindCSS and related packages:
-   ```bash
-   npm uninstall tailwindcss postcss autoprefixer prettier-plugin-tailwindcss
-   ```
-3. Remove any usage of `@tailwind`, `@apply`, and `@layer` from your `index.css`:
-   ```css
-   @tailwind base;
-   @tailwind components;
-   @tailwind utilities;
-
-   @layer base {
-       * {
-           @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500;
-       }
-   }
-   ```
-4. Remove `prettier-plugin-tailwind` from the `"plugins"` field in `.prettierrc`:
-   ```json
-   "plugins": ["prettier-plugin-tailwindcss"]
-   ```
-5. Update your JSX components to use standard CSS classes.
+> [!CAUTION]
+> ### Removing TailwindCSS
+> 
+> 1. Delete the `tailwind.config.js` and `postcss.config.js` files.
+> 2. Uninstall TailwindCSS and related packages:
+>    ```bash
+>    npm uninstall tailwindcss postcss autoprefixer prettier-plugin-tailwindcss
+>    ```
+> 3. Remove any usage of `@tailwind`, `@apply`, and `@layer` from your `index.css`:
+>    ```css
+>    @tailwind base;
+>    @tailwind components;
+>    @tailwind utilities;
+> 
+>    @layer base {
+>        * {
+>            @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500;
+>        }
+>    }
+>    ```
+> 4. Remove `prettier-plugin-tailwind` from the `"plugins"` field in `.prettierrc`:
+>    ```json
+>    "plugins": ["prettier-plugin-tailwindcss"]
+>    ```
+> 5. Update your JSX components to use standard CSS classes.
 
 ## ESLint Configuration
 
 This project uses the following ESLint configurations:
 
--   `eslint:recommended`
--   `plugin:react/recommended`
--   `plugin:@typescript-eslint/recommended`
--   `airbnb`
--   `plugin:import/errors`
--   `plugin:jsx-a11y/recommended`
--   `plugin:prettier/recommended`
+- `eslint:recommended`
+- `plugin:react/recommended`
+- `plugin:@typescript-eslint/recommended`
+- `airbnb`
+- `plugin:import/errors`
+- `plugin:jsx-a11y/recommended`
+- `plugin:prettier/recommended`
 
 You can find the ESLint configuration in the `.eslintrc` file.
 
-### Removing ESLint
-
-1. Delete the `.eslintrc` and `.eslintignore` files.
-2. Uninstall ESLint and associated plugins:
-   ```bash
-   npm uninstall eslint @eslint/js @typescript-eslint/parser eslint-config-airbnb eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks
-   ```
-3. Remove the `"lint"` and `"lint:fix"` scripts, along with the `"eslintConfig"` field from `package.json`:
-   ```json
-   "scripts": {
-       "lint": "eslint .",
-       "lint:fix": "eslint --fix ."
-   },
-   "eslintConfig": {
-       "extends": [
-           "react-app",
-           "react-app/jest"
-       ]
-   }
-   ```
+> [!CAUTION]
+> ### Removing ESLint
+> 
+> 1. Delete the `.eslintrc` and `.eslintignore` files.
+> 2. Uninstall ESLint and associated plugins:
+>    ```bash
+>    npm uninstall eslint @eslint/js @typescript-eslint/parser eslint-config-airbnb eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks
+>    ```
+> 3. Remove the `"lint"` and `"lint:fix"` scripts, along with the `"eslintConfig"` field from `package.json`:
+>    ```json
+>    "scripts": {
+>        "lint": "eslint .",
+>        "lint:fix": "eslint --fix ."
+>    },
+>    "eslintConfig": {
+>        "extends": [
+>            "react-app",
+>            "react-app/jest"
+>        ]
+>    }
+>    ```
 
 ## Prettier Configuration
 
 Prettier is used for code formatting. You can find the configuration in the `.prettierrc` file.
 
-### Removing Prettier
-
-1. Delete the `.prettierrc` and `.prettierignore` files.
-2. Uninstall Prettier and related plugins:
-   ```bash
-   npm uninstall prettier eslint-plugin-prettier
-   ```
-3. Remove the `"format"` script from `package.json`:
-   ```json
-   "scripts": {
-       "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,html,css,md}'"
-   }
-   ```
-4. Remove Prettier references from the `"plugins"` and `"extends"` fields in the `.eslintrc` configuration:
-   ```json
-   "plugins": ["react", "import", "jsx-a11y", "prettier", "@typescript-eslint"],
-   "extends": [
-       "eslint:recommended",
-       "plugin:react/recommended",
-       "plugin:@typescript-eslint/recommended",
-       "airbnb",
-       "plugin:import/errors",
-       "plugin:jsx-a11y/recommended",
-       "plugin:prettier/recommended"
-   ],
-   ```
+> [!CAUTION]
+> ### Removing Prettier
+> 
+> 1. Delete the `.prettierrc` and `.prettierignore` files.
+> 2. Uninstall Prettier and related plugins:
+>    ```bash
+>    npm uninstall prettier eslint-plugin-prettier
+>    ```
+> 3. Remove the `"format"` script from `package.json`:
+>    ```json
+>    "scripts": {
+>        "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,html,css,md}'"
+>    }
+>    ```
+> 4. Remove Prettier references from the `"plugins"` and `"extends"` fields in the `.eslintrc` configuration:
+>    ```json
+>    "plugins": ["react", "import", "jsx-a11y", "prettier", "@typescript-eslint"],
+>    "extends": [
+>        "eslint:recommended",
+>        "plugin:react/recommended",
+>        "plugin:@typescript-eslint/recommended",
+>        "airbnb",
+>        "plugin:import/errors",
+>        "plugin:jsx-a11y/recommended",
+>        "plugin:prettier/recommended"
+>    ],
+>    ```
 
 ## Docker Configuration
 
@@ -197,28 +200,34 @@ docker build -t react-template .
 docker run -p 3000:3000 react-template
 ```
 
-### Removing Docker
-
-1. Delete the `Dockerfile` and `.dockerignore` files.
+> [!CAUTION]
+> ### Removing Docker
+> 
+> 1. Delete the `Dockerfile` and `.dockerignore` files.
 
 ## PWA Configuration
 
 This project is configured as a Progressive Web App using Workbox. The service worker is generated during the build process.
 
-### Removing PWA Support
+> [!CAUTION]
+> ### Removing PWA Support
+> 
+> 1. Delete `service-worker.js`, `serviceWorkerRegistration.js`, `manifest.json`, `favicon.ico`, and the `public/images/favicons` folder.
+>
 
-1. Delete `service-worker.js`, `serviceWorkerRegistration.js`, `manifest.json`, `favicon.ico`, and the `public/images/favicons` folder.
-2. Remove the service worker registration code from `index.tsx`:
-   ```tsx
-   import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
-   serviceWorkerRegistration.register();
-   ```
-3. Remove favicon link tags from `index.html`:
-   ```html
-   <link rel="apple-touch-icon" sizes="180x180" href="/react-template/images/favicons/apple-touch-icon.png" />
-   <link rel="icon" type="image/png" sizes="32x32" href="/react-template/images/favicons/favicon-32x32.png" />
-   <link rel="icon" type="image/png" sizes="16x16" href="/react-template/images/favicons/favicon-16x16.png" />
-   ```
+ 2. Remove all references to the service worker from `index.tsx`:
+>    ```typescript
+>    import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+> 
+>    serviceWorkerRegistration.unregister();
+>    ```
+>
+> 3. Remove favicon link tags from `index.html`:
+>    ```html
+>    <link rel="apple-touch-icon" sizes="180x180" href="/react-template/images/favicons/apple-touch-icon.png" />
+>    <link rel="icon" type="image/png" sizes="32x32" href="/react-template/images/favicons/favicon-32x32.png" />
+>    <link rel="icon" type="image/png" sizes="16x16" href="/react-template/images/favicons/favicon-16x16.png" />
+>    ```
 
 ## GitHub Pages Deployment
 
@@ -232,51 +241,52 @@ yarn deploy
 
 Unlike many GitHub Pages setups that require the use of `HashRouter` due to URL routing limitations, this template is compatible with `BrowserRouter` thanks to the configuration provided by [rafgraph's Single Page Apps for GitHub Pages](https://github.com/rafgraph/spa-github-pages). It uses a custom `404.html` file and a redirect script to handle URL routing correctly and avoid 404 errors on page reloads. Be sure to update the `homepage` field in `package.json` to match your repository URL.
 
-### Removing GitHub Pages Deployment
-
-1. Uninstall the `gh-pages` package:
-   ```bash
-   npm uninstall gh-pages
-   ```
-2. Remove the `"deploy"` and `"predeploy"` scripts from `package.json`:
-   ```json
-   "scripts": {
-       "predeploy": "npm run build",
-       "deploy": "gh-pages -d build"
-   }
-   ```
-3. Update the `Router` component's `basename` property in `index.tsx`:
-   ```jsx
-   <Router basename="/react-template/">
-   ```
-4. Remove or update all `href` attributes in `index.html`:
-   ```html
-   <link rel="canonical" href="https://discontinuedlabs.github.io/react-template/" />
-   <link rel="apple-touch-icon" sizes="180x180" href="/react-template/images/favicons/apple-touch-icon.png" />
-   <link rel="icon" type="image/png" sizes="32x32" href="/react-template/images/favicons/favicon-32x32.png" />
-   <link rel="icon" type="image/png" sizes="16x16" href="/react-template/images/favicons/favicon-16x16.png" />
-   ```
-7. If your deployment platform supports `BrowserRouter` without special configuration, delete `404.html` and remove the "Single Page Apps for GitHub Pages" script from `index.html`:
-   ```html
-   <script type="text/javascript">
-       (function (location) {
-           if (location.search.startsWith("/")) {
-               var decodedUrl = location.search
-                   .slice(1)
-                   .split("&")
-                   .map(function (part) {
-                       return part.replace(/~and~/g, "&");
-                   })
-                   .join("?");
-               window.history.replaceState(
-                   null,
-                   null,
-                   location.pathname.slice(0, -1) + decodedUrl + location.hash
-               );
-           }
-       })(window.location);
-   </script>
-   ```
+> [!CAUTION]
+> ### Removing GitHub Pages Deployment
+> 
+> 1. Uninstall the `gh-pages` package:
+>    ```bash
+>    npm uninstall gh-pages
+>    ```
+> 2. Remove the `"deploy"` and `"predeploy"` scripts from `package.json`:
+>    ```json
+>    "scripts": {
+>        "predeploy": "npm run build",
+>        "deploy": "gh-pages -d build"
+>    }
+>    ```
+> 3. Update the `Router` component's `basename` property in `index.tsx`:
+>    ```jsx
+>    <Router basename="/react-template/">
+>    ```
+> 4. Remove or update all `href` attributes in `index.html`:
+>    ```html
+>    <link rel="canonical" href="https://discontinuedlabs.github.io/react-template/" />
+>    <link rel="apple-touch-icon" sizes="180x180" href="/react-template/images/favicons/apple-touch-icon.png" />
+>    <link rel="icon" type="image/png" sizes="32x32" href="/react-template/images/favicons/favicon-32x32.png" />
+>    <link rel="icon" type="image/png" sizes="16x16" href="/react-template/images/favicons/favicon-16x16.png" />
+>    ```
+> 5. If your deployment platform supports `BrowserRouter` without special configuration, delete `404.html` and remove the "Single Page Apps for GitHub Pages" script from `index.html`:
+>    ```html
+>    <script type="text/javascript">
+>        (function (location) {
+>            if (location.search.startsWith("/")) {
+>                var decodedUrl = location.search
+>                    .slice(1)
+>                    .split("&")
+>                    .map(function (part) {
+>                        return part.replace(/~and~/g, "&");
+>                    })
+>                    .join("?");
+>                window.history.replaceState(
+>                    null,
+>                    null,
+>                    location.pathname.slice(0, -1) + decodedUrl + location.hash
+>                );
+>            }
+>        })(window.location);
+>    </script>
+>    ```
 
 ## Repository Configuration
 
