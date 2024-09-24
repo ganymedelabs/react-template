@@ -213,9 +213,7 @@ This project is configured as a Progressive Web App using Workbox. The service w
 > ### Removing PWA Support
 > 
 > 1. Delete `service-worker.js`, `serviceWorkerRegistration.js`, `manifest.json`, `favicon.ico`, and the `public/images/favicons` folder.
->
-
- 2. Remove all references to the service worker from `index.tsx`:
+> 2. Remove all references to the service worker from `index.tsx`:
 >    ```typescript
 >    import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 > 
