@@ -56,6 +56,10 @@ This is a React template created with Create React App (CRA) and configured with
 npm start
 # or
 yarn start
+
+# or if you prefer to run it inside a Docker container
+docker build -t react-template .
+docker run -p 3000:3000 react-template
 ```
 
 This will start the development server at `http://localhost:3000/react-template/`.
