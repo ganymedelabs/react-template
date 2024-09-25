@@ -30,12 +30,11 @@
              * - For other cases, set `pathSegmentsToKeep` to 0.
              */
 
-            const pathSegmentsToKeep = 0; // Adjust as needed for your project configuration
+            var pathSegmentsToKeep = 0;
 
-            const location = window.location;
+            var location = window.location;
 
-            // Construct the new URL
-            const newUrl =
+            var newUrl =
                 location.protocol +
                 "//" +
                 location.hostname +
@@ -49,7 +48,6 @@
                 (location.search ? "&" + location.search.slice(1).replace(/&/g, "~and~") : "") +
                 location.hash;
 
-            // Redirect the browser to the new URL
             location.replace(newUrl);
         </script>
     </head>
