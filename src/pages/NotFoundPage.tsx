@@ -1,5 +1,6 @@
 import React from "react";
-import Image from "./Image.tsx";
+import { Link } from "react-router-dom";
+import Image from "../components/Image.tsx";
 
 export default function NotFoundPage(): React.JSX.Element {
     return (
@@ -13,7 +14,7 @@ export default function NotFoundPage(): React.JSX.Element {
                 />
                 <h1 className="text-center">Not Found!</h1>
                 <p className="text-center">
-                    Go back <a href={process.env.PUBLIC_URL}>home</a>.
+                    Go back <Link to=".">home</Link>.
                 </p>
             </div>
         </div>

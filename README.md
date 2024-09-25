@@ -247,11 +247,11 @@ Unlike many GitHub Pages setups that require the use of `HashRouter` due to URL 
 >     ```
 > 3. Update the `Router` component's `basename` property in `index.tsx`:
 >     ```jsx
->     <Router basename="/react-template/">
+>     <Router basename="/react-template">
 >     ```
 > 4. Remove or update all `href` attributes in `index.html`:
 >     ```html
->     <link rel="canonical" href="https://discontinuedlabs.github.io/react-template/" />
+>     <link rel="canonical" href="https://discontinuedlabs.github.io/react-template" />
 >     <link rel="apple-touch-icon" sizes="180x180" href="/react-template/images/favicons/apple-touch-icon.png" />
 >     ```
 > 5. If your deployment platform supports `BrowserRouter` without special configuration, delete `404.html` and remove the "Single Page Apps for GitHub Pages" script from `index.html`:
@@ -286,10 +286,10 @@ To make this template work for your repository, you need to update a few configu
 
 2. **src/index.tsx**
 
-    - Change the `basename` value of `<Router basename="/react-template/">` to the name of your repository.
+    - Change the `basename` value of `<Router basename="/react-template">` to the name of your repository.
 
     ```jsx
-    <Router basename="/your-repo-name/">
+    <Router basename="/your-repo-name">
     ```
 
 3. **public/manifest.json**
@@ -310,10 +310,10 @@ To make this template work for your repository, you need to update a few configu
 
 4. **public/index.html**
 
-    - Change the `href` value of `<link rel="canonical" href="https://discontinuedlabs.github.io/react-template/" />` to the URL of your GitHub Pages.
+    - Change the `href` value of `<link rel="canonical" href="https://discontinuedlabs.github.io/react-template" />` to the URL of your GitHub Pages.
 
     ```html
-    <link rel="canonical" href="https://your-username.github.io/your-repo-name/" />
+    <link rel="canonical" href="https://your-username.github.io/your-repo-name" />
     ```
 
     - Replace all instances of `"react-template"` in `href` values to your repository name. If your GitHub Pages URL is `https://your-username.github.io/`, leave the `"react-template"` string as `"/"`.
