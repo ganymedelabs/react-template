@@ -205,7 +205,7 @@ This project is configured as a Progressive Web App using Workbox. The service w
 > ### Removing PWA Support
 >
 > 1. Delete `service-worker.js`, `serviceWorkerRegistration.js`, `manifest.json`, `favicon.ico`, and the `public/images/favicons` folder.
-> 2. Remove all references to the service worker from `index.tsx`:
+> 2. Remove the service worker registration code from `index.tsx`:
 >
 >     ```typescript
 >     import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
@@ -289,7 +289,7 @@ To make this template work for your repository, you need to update a few configu
     - Change the `basename` value of `<Router basename="/react-template/">` to the name of your repository.
 
     ```jsx
-    <Router basename="/your-repo-name">
+    <Router basename="/your-repo-name/">
     ```
 
 3. **public/manifest.json**
@@ -313,7 +313,7 @@ To make this template work for your repository, you need to update a few configu
     - Change the `href` value of `<link rel="canonical" href="https://discontinuedlabs.github.io/react-template/" />` to the URL of your GitHub Pages.
 
     ```html
-    <link rel="canonical" href="https://your-username.github.io/your-repo-name" />
+    <link rel="canonical" href="https://your-username.github.io/your-repo-name/" />
     ```
 
     - Replace all instances of `"react-template"` in `href` values to your repository name. If your GitHub Pages URL is `https://your-username.github.io/`, leave the `"react-template"` string as `"/"`.
