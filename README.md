@@ -58,7 +58,7 @@ npm start
 yarn start
 ```
 
-This will start the development server at `http://localhost:3000`.
+This will start the development server at `http://localhost:3000/react-template/`.
 
 ## TypeScript Configuration
 
@@ -247,28 +247,23 @@ Unlike many GitHub Pages setups that require the use of `HashRouter` due to URL 
 >     ```
 > 3. Update the `Router` component's `basename` property in `index.tsx`:
 >     ```jsx
->     <Router basename="/react-template">
+>     <Router basename="/react-template/">
 >     ```
 > 4. Remove or update all `href` attributes in `index.html`:
 >     ```html
->     <link rel="canonical" href="https://discontinuedlabs.github.io/react-template" />
+>     <link rel="canonical" href="https://discontinuedlabs.github.io/react-template/" />
 >     <link rel="apple-touch-icon" sizes="180x180" href="/react-template/images/favicons/apple-touch-icon.png" />
 >     ```
 > 5. If your deployment platform supports `BrowserRouter` without special configuration, delete `404.html` and remove the "Single Page Apps for GitHub Pages" script from `index.html`:
 >     ```html
 >     <script type="text/javascript">
->         (function (location) {
->             if (location.search.startsWith("/")) {
->                 var decodedUrl = location.search
->                     .slice(1)
->                     .split("&")
->                     .map(function (part) {
->                         return part.replace(/~and~/g, "&");
->                     })
->                     .join("?");
->                 window.history.replaceState(null, null, location.pathname.slice(0, -1) + decodedUrl + location.hash);
+>         (function () {
+>             var redirect = sessionStorage.redirect;
+>             delete sessionStorage.redirect;
+>             if (redirect && redirect !== location.href) {
+>                 history.replaceState(null, null, redirect);
 >             }
->         })(window.location);
+>         })();
 >     </script>
 >     ```
 
@@ -286,7 +281,7 @@ To make this template work for your repository, you need to update a few configu
 
 2. **src/index.tsx**
 
-    - Change the `basename` value of `<Router basename="/react-template">` to the name of your repository.
+    - Change the `basename` value of `<Router basename="/react-template/">` to the name of your repository.
 
     ```jsx
     <Router basename="/your-repo-name">
@@ -310,7 +305,7 @@ To make this template work for your repository, you need to update a few configu
 
 4. **public/index.html**
 
-    - Change the `href` value of `<link rel="canonical" href="https://discontinuedlabs.github.io/react-template" />` to the URL of your GitHub Pages.
+    - Change the `href` value of `<link rel="canonical" href="https://discontinuedlabs.github.io/react-template/" />` to the URL of your GitHub Pages.
 
     ```html
     <link rel="canonical" href="https://your-username.github.io/your-repo-name" />
