@@ -7,7 +7,7 @@ import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
-        <Router basename="/react-template">
+        <Router basename="/react-template/">
             <App />
         </Router>
     </React.StrictMode>
