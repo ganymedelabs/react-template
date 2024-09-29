@@ -361,6 +361,6 @@ Additionally, while not required for the template to work, it's a good idea to c
 }
 ```
 
-## ⚖️ License
+## 📜 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
