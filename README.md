@@ -1,6 +1,7 @@
 # React Template with TypeScript, TailwindCSS, ESLint, Prettier, Docker, and PWA Support
 
 ![React version](https://img.shields.io/badge/React-18.3.1-61DAFB?logo=react&logoColor=white)
+![React Scripts version](https://img.shields.io/badge/React%20Scripts-5.0.1-09D3AE?logo=create-react-app&logoColor=white)
 ![TailwindCSS version](https://img.shields.io/badge/TailwindCSS-3.4.10-06B6D4?logo=tailwindcss&logoColor=white)
 ![TypeScript version](https://img.shields.io/badge/TypeScript-5.5.3-3178C6?logo=typescript&logoColor=white)
 ![ESLint version](https://img.shields.io/badge/ESLint-8.57.0-4B32C3?logo=eslint&logoColor=white)
