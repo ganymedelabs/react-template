@@ -23,7 +23,7 @@ This is a React template created with Create React App (CRA) and configured with
 -   [PWA Configuration](#-pwa-configuration)
 -   [GitHub Pages Deployment](#-github-pages-deployment)
 -   [Repository Configuration](#-repository-configuration)
--   [License](#license)
+-   [License](#-license)
 
 ## 🚀 Getting Started
 
