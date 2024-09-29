@@ -14,18 +14,18 @@ This is a React template created with Create React App (CRA) and configured with
 
 ## Table of Contents
 
--   [Getting Started](#getting-started)
--   [TypeScript Configuration](#typescript-configuration)
--   [TailwindCSS Configuration](#tailwindcss-configuration)
--   [ESLint Configuration](#eslint-configuration)
--   [Prettier Configuration](#prettier-configuration)
--   [Docker Configuration](#docker-configuration)
--   [PWA Configuration](#pwa-configuration)
--   [GitHub Pages Deployment](#github-pages-deployment)
--   [Repository Configuration](#repository-configuration)
+-   [Getting Started](#-getting-started)
+-   [TypeScript Configuration](#-typescript-configuration)
+-   [TailwindCSS Configuration](#-tailwindcss-configuration)
+-   [ESLint Configuration](#-eslint-configuration)
+-   [Prettier Configuration](#-prettier-configuration)
+-   [Docker Configuration](#-docker-configuration)
+-   [PWA Configuration](#-pwa-configuration)
+-   [GitHub Pages Deployment](#-github-pages-deployment)
+-   [Repository Configuration](#-repository-configuration)
 -   [License](#license)
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -64,7 +64,7 @@ docker run -p 3000:3000 react-template
 
 This will start the development server at `http://localhost:3000/react-template/`.
 
-## TypeScript Configuration
+## 📘 TypeScript Configuration
 
 This template uses TypeScript for static type-checking and ensuring type safety. You can find the configuration in the `tsconfig.json` file.
 
@@ -90,7 +90,7 @@ This template uses TypeScript for static type-checking and ensuring type safety.
 >     "extends": ["plugin:@typescript-eslint/recommended"]
 >     ```
 
-## TailwindCSS Configuration
+## 🎨 TailwindCSS Configuration
 
 TailwindCSS is used for utility-first styling. It is configured with Just-in-Time (JIT) mode for optimized builds. You can find the configuration in the `tailwind.config.js` file.
 
@@ -123,7 +123,7 @@ TailwindCSS is used for utility-first styling. It is configured with Just-in-Tim
 >     ```
 > 5. Update your JSX components to use standard CSS classes.
 
-## ESLint Configuration
+## 🔍 ESLint Configuration
 
 This project uses the following ESLint configurations:
 
@@ -160,7 +160,7 @@ You can find the ESLint configuration in the `.eslintrc` file.
 >     }
 >     ```
 
-## Prettier Configuration
+## ✨ Prettier Configuration
 
 Prettier is used for code formatting. You can find the configuration in the `.prettierrc` file.
 
@@ -185,7 +185,7 @@ Prettier is used for code formatting. You can find the configuration in the `.pr
 >     "extends": ["plugin:prettier/recommended"]
 >     ```
 
-## Docker Configuration
+## 🐳 Docker Configuration
 
 This project includes a `Dockerfile` for containerizing the application. The Dockerfile uses `node:18-alpine` as the base image. To build and run the Docker container, use the following commands:
 
@@ -200,7 +200,7 @@ docker run -p 3000:3000 react-template
 >
 > 1. Delete the `Dockerfile` and `.dockerignore` files.
 
-## PWA Configuration
+## 📱 PWA Configuration
 
 This project is configured as a Progressive Web App using Workbox. The service worker is generated during the build process.
 
@@ -222,7 +222,7 @@ This project is configured as a Progressive Web App using Workbox. The service w
 >     <link rel="apple-touch-icon" sizes="180x180" href="/react-template/images/favicons/apple-touch-icon.png" />
 >     ```
 
-## GitHub Pages Deployment
+## 🌐 GitHub Pages Deployment
 
 This project is configured to be deployed to GitHub Pages. To deploy, run:
 
@@ -276,7 +276,7 @@ Unlike many GitHub Pages setups that require the use of `HashRouter` due to URL 
 >     </script>
 >     ```
 
-## Repository Configuration
+## ⚙️ Repository Configuration
 
 To make this template work for your repository, you need to update a few configuration files:
 
@@ -361,6 +361,6 @@ Additionally, while not required for the template to work, it's a good idea to c
 }
 ```
 
-## License
+## ⚖️ License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
