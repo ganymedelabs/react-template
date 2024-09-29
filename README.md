@@ -276,7 +276,7 @@ Unlike many GitHub Pages setups that require the use of `HashRouter` due to URL 
 >     </script>
 >     ```
 
-## ⚙️ Repository Configuration
+## 🔧 Repository Configuration
 
 To make this template work for your repository, you need to update a few configuration files:
 
