@@ -1,12 +1,13 @@
 # React Template with TypeScript, TailwindCSS, ESLint, Prettier, Docker, and PWA Support
 
 ![React version](https://img.shields.io/badge/React-18.3.1-61DAFB?logo=react&logoColor=white)
+![React Scripts version](https://img.shields.io/badge/React%20Scripts-5.0.1-09D3AE?logo=create-react-app&logoColor=white)
 ![TailwindCSS version](https://img.shields.io/badge/TailwindCSS-3.4.10-06B6D4?logo=tailwindcss&logoColor=white)
 ![TypeScript version](https://img.shields.io/badge/TypeScript-5.5.3-3178C6?logo=typescript&logoColor=white)
 ![ESLint version](https://img.shields.io/badge/ESLint-8.57.0-4B32C3?logo=eslint&logoColor=white)
 ![Prettier version](https://img.shields.io/badge/Prettier-3.3.2-F7B93E?logo=prettier&logoColor=white)
-![PWA Support](https://img.shields.io/badge/PWA-Support-4FC08D?logo=pwa&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Available-2496ED?logo=docker&logoColor=white)
+![PWA Support](https://img.shields.io/badge/PWA-support-4FC08D?logo=pwa&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-available-2496ED?logo=docker&logoColor=white)
 ![GitHub Pages](https://img.shields.io/github/deployments/discontinuedlabs/react-template/github-pages?label=GitHub%20Pages&color=brightgreen&logo=github&logoColor=white)
 ![BrowserRouter](https://img.shields.io/badge/Router-BrowserRouter-CA4245?logo=reactrouter&logoColor=white)
 
@@ -14,18 +15,18 @@ This is a React template created with Create React App (CRA) and configured with
 
 ## Table of Contents
 
--   [Getting Started](#getting-started)
--   [TypeScript Configuration](#typescript-configuration)
--   [TailwindCSS Configuration](#tailwindcss-configuration)
--   [ESLint Configuration](#eslint-configuration)
--   [Prettier Configuration](#prettier-configuration)
--   [Docker Configuration](#docker-configuration)
--   [PWA Configuration](#pwa-configuration)
--   [GitHub Pages Deployment](#github-pages-deployment)
--   [Repository Configuration](#repository-configuration)
--   [License](#license)
+-   [Getting Started](#-getting-started)
+-   [TypeScript Configuration](#-typescript-configuration)
+-   [TailwindCSS Configuration](#-tailwindcss-configuration)
+-   [ESLint Configuration](#-eslint-configuration)
+-   [Prettier Configuration](#-prettier-configuration)
+-   [Docker Configuration](#-docker-configuration)
+-   [PWA Configuration](#-pwa-configuration)
+-   [GitHub Pages Deployment](#-github-pages-deployment)
+-   [Repository Configuration](#-repository-configuration)
+-   [License](#-license)
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -56,11 +57,15 @@ This is a React template created with Create React App (CRA) and configured with
 npm start
 # or
 yarn start
+
+# or if you prefer to run it inside a Docker container
+docker build -t react-template .
+docker run -p 3000:3000 react-template
 ```
 
 This will start the development server at `http://localhost:3000/react-template/`.
 
-## TypeScript Configuration
+## 📘 TypeScript Configuration
 
 This template uses TypeScript for static type-checking and ensuring type safety. You can find the configuration in the `tsconfig.json` file.
 
@@ -86,7 +91,7 @@ This template uses TypeScript for static type-checking and ensuring type safety.
 >     "extends": ["plugin:@typescript-eslint/recommended"]
 >     ```
 
-## TailwindCSS Configuration
+## 🎨 TailwindCSS Configuration
 
 TailwindCSS is used for utility-first styling. It is configured with Just-in-Time (JIT) mode for optimized builds. You can find the configuration in the `tailwind.config.js` file.
 
@@ -119,7 +124,7 @@ TailwindCSS is used for utility-first styling. It is configured with Just-in-Tim
 >     ```
 > 5. Update your JSX components to use standard CSS classes.
 
-## ESLint Configuration
+## 🔍 ESLint Configuration
 
 This project uses the following ESLint configurations:
 
@@ -157,7 +162,7 @@ You can find the ESLint configuration in the `.eslintrc` file.
 >     }
 >     ```
 
-## Prettier Configuration
+## ✨ Prettier Configuration
 
 Prettier is used for code formatting. You can find the configuration in the `.prettierrc` file.
 
@@ -182,7 +187,7 @@ Prettier is used for code formatting. You can find the configuration in the `.pr
 >     "extends": ["plugin:prettier/recommended"]
 >     ```
 
-## Docker Configuration
+## 🐳 Docker Configuration
 
 This project includes a `Dockerfile` for containerizing the application. The Dockerfile uses `node:18-alpine` as the base image. To build and run the Docker container, use the following commands:
 
@@ -197,7 +202,7 @@ docker run -p 3000:3000 react-template
 >
 > 1. Delete the `Dockerfile` and `.dockerignore` files.
 
-## PWA Configuration
+## 📱 PWA Configuration
 
 This project is configured as a Progressive Web App using Workbox. The service worker is generated during the build process.
 
@@ -206,7 +211,7 @@ This project is configured as a Progressive Web App using Workbox. The service w
 > ### Removing PWA Support
 >
 > 1. Delete `service-worker.js`, `serviceWorkerRegistration.js`, `manifest.json`, `favicon.ico`, and the `public/images/favicons` folder.
-> 2. Remove all references to the service worker from `index.tsx`:
+> 2. Remove the service worker registration code from `index.tsx`:
 >
 >     ```typescript
 >     import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
@@ -219,7 +224,7 @@ This project is configured as a Progressive Web App using Workbox. The service w
 >     <link rel="apple-touch-icon" sizes="180x180" href="/react-template/images/favicons/apple-touch-icon.png" />
 >     ```
 
-## GitHub Pages Deployment
+## 🌐 GitHub Pages Deployment
 
 This project is configured to be deployed to GitHub Pages. To deploy, run:
 
@@ -273,7 +278,7 @@ Unlike many GitHub Pages setups that require the use of `HashRouter` due to URL 
 >     </script>
 >     ```
 
-## Repository Configuration
+## 🔧 Repository Configuration
 
 To make this template work for your repository, you need to update a few configuration files:
 
@@ -290,7 +295,7 @@ To make this template work for your repository, you need to update a few configu
     - Change the `basename` value of `<Router basename="/react-template/">` to the name of your repository.
 
     ```jsx
-    <Router basename="/your-repo-name">
+    <Router basename="/your-repo-name/">
     ```
 
 3. **public/manifest.json**
@@ -314,7 +319,7 @@ To make this template work for your repository, you need to update a few configu
     - Change the `href` value of `<link rel="canonical" href="https://discontinuedlabs.github.io/react-template/" />` to the URL of your GitHub Pages.
 
     ```html
-    <link rel="canonical" href="https://your-username.github.io/your-repo-name" />
+    <link rel="canonical" href="https://your-username.github.io/your-repo-name/" />
     ```
 
     - Replace all instances of `"react-template"` in `href` values to your repository name. If your GitHub Pages URL is `https://your-username.github.io/`, leave the `"react-template"` string as `"/"`.
@@ -358,6 +363,6 @@ Additionally, while not required for the template to work, it's a good idea to c
 }
 ```
 
-## License
+## 📜 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
