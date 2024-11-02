@@ -1,14 +1,14 @@
 {
-    "homepage": "https://discontinuedlabs.github.io/react-template/",
+    "homepage": "https://ganymedelabs.github.io/react-template/",
     "name": "react-template",
-    "author": "discontinuedlabs",
+    "author": "ganymedelabs",
     "description": "A React template built with Create React App (CRA), featuring TypeScript, TailwindCSS, ESLint, Prettier, Docker, PWA (Workbox), and GitHub Pages deployment configured to support BrowserRouter.",
     "license": "MIT",
     "version": "1.0.0",
     "private": true,
     "repository": {
         "type": "git",
-        "url": "https://github.com/discontinuedlabs/react-template.git"
+        "url": "https://github.com/ganymedelabs/react-template.git"
     },
     "keywords": [
         "PWA",
@@ -27,7 +27,7 @@
         "Template"
     ],
     "bugs": {
-        "url": "https://github.com/discontinuedlabs/react-template/issues"
+        "url": "https://github.com/ganymedelabs/react-template/issues"
     },
     "dependencies": {
         "react-router-dom": "^6.21.1"
