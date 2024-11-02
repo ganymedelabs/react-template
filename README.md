@@ -8,7 +8,7 @@
 ![Prettier version](https://img.shields.io/badge/Prettier-3.3.2-F7B93E?logo=prettier&logoColor=white)
 ![PWA Support](https://img.shields.io/badge/PWA-support-4FC08D?logo=pwa&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-available-2496ED?logo=docker&logoColor=white)
-![GitHub Pages](https://img.shields.io/github/deployments/discontinuedlabs/react-template/github-pages?label=GitHub%20Pages&color=brightgreen&logo=github&logoColor=white)
+![GitHub Pages](https://img.shields.io/github/deployments/ganymedelabs/react-template/github-pages?label=GitHub%20Pages&color=brightgreen&logo=github&logoColor=white)
 ![BrowserRouter](https://img.shields.io/badge/Router-BrowserRouter-CA4245?logo=reactrouter&logoColor=white)
 
 This is a React template created with Create React App (CRA) and configured with TypeScript, TailwindCSS, ESLint, Prettier, Docker, and PWA support using Workbox. It is ready to be deployed on GitHub Pages and is compatible with BrowserRouter, allowing seamless URL routing.
@@ -39,7 +39,7 @@ This is a React template created with Create React App (CRA) and configured with
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/discontinuedlabs/react-template.git
+    git clone https://github.com/ganymedelabs/react-template.git
     cd react-template
     ```
 
@@ -257,7 +257,7 @@ Unlike many GitHub Pages setups that require the use of `HashRouter` due to URL 
 >     ```
 > 4. Remove or update all `href` attributes in `index.html`:
 >     ```html
->     <link rel="canonical" href="https://discontinuedlabs.github.io/react-template/" />
+>     <link rel="canonical" href="https://ganymedelabs.github.io/react-template/" />
 >     <link rel="apple-touch-icon" sizes="180x180" href="/react-template/images/favicons/apple-touch-icon.png" />
 >     ```
 > 5. If your deployment platform supports `BrowserRouter` without special configuration, delete `404.html` and remove the "Single Page Apps for GitHub Pages" script from `index.html`:
@@ -316,7 +316,7 @@ To make this template work for your repository, you need to update a few configu
 
 4. **public/index.html**
 
-    - Change the `href` value of `<link rel="canonical" href="https://discontinuedlabs.github.io/react-template/" />` to the URL of your GitHub Pages.
+    - Change the `href` value of `<link rel="canonical" href="https://ganymedelabs.github.io/react-template/" />` to the URL of your GitHub Pages.
 
     ```html
     <link rel="canonical" href="https://your-username.github.io/your-repo-name/" />
@@ -333,14 +333,14 @@ Additionally, while not required for the template to work, it's a good idea to c
 
 ```json
 "name": "react-template",
-"author": "discontinuedlabs",
+"author": "ganymedelabs",
 "description": "This is a React template created with Create React App (CRA) and configured with TypeScript, TailwindCSS, ESLint, Prettier, Docker, and PWA support using Workbox. It is ready to be deployed on GitHub Pages and is set up to enforce code quality and styling guidelines.",
 "license": "MIT",
 "version": "1.0.0",
 "private": true,
 "repository": {
     "type": "git",
-    "url": "https://github.com/discontinuedlabs/react-template.git"
+    "url": "https://github.com/ganymedelabs/react-template.git"
 },
 "keywords": [
     "PWA",
@@ -359,7 +359,7 @@ Additionally, while not required for the template to work, it's a good idea to c
     "Template"
 ],
 "bugs": {
-    "url": "https://github.com/discontinuedlabs/react-template/issues"
+    "url": "https://github.com/ganymedelabs/react-template/issues"
 }
 ```
 
