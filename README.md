@@ -293,10 +293,13 @@ To make this template work for your repository, you need to update a few configu
 
 1. **package.json**
 
-    - Change the `homepage` URL to the GitHub Pages URL of your repository.
+    - Change the `homepage` URL to the GitHub Pages URL of your repository and the `scripts.start` URL to your local development server URL.
 
     ```json
     "homepage": "https://your-username.github.io/your-repo-name/"
+    "scripts": {
+        "start": "react-scripts start BROWSER=http://localhost:3000/your-repo-name/"
+    }
     ```
 
 2. **src/index.tsx**

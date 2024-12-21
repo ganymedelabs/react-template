@@ -1,5 +1,5 @@
 {
-    "homepage": "/react-template/",
+    "homepage": "https://ganemedelabs.github.io/react-template/",
     "name": "react-template",
     "author": "ganemedelabs",
     "description": "A React template built with Create React App (CRA), featuring TypeScript, TailwindCSS, ESLint, Prettier, Docker, PWA (Workbox), and GitHub Pages deployment configured to support BrowserRouter.",
@@ -72,7 +72,7 @@
     "scripts": {
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build",
-        "start": "react-scripts start",
+        "start": "react-scripts start BROWSER=http://localhost:3000/react-template/",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
