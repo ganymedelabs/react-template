@@ -3,7 +3,7 @@
 ![React version](https://img.shields.io/badge/React-19.0.0-61DAFB?logo=react&logoColor=white)
 ![React Scripts version](https://img.shields.io/badge/React%20Scripts-5.0.1-09D3AE?logo=create-react-app&logoColor=white)
 ![TailwindCSS version](https://img.shields.io/badge/TailwindCSS-3.4.10-06B6D4?logo=tailwindcss&logoColor=white)
-![TypeScript version](https://img.shields.io/badge/TypeScript-4.9.5-3178C6?logo=typescript&logoColor=white)
+![TypeScript version](https://img.shields.io/badge/TypeScript-5.5.3-3178C6?logo=typescript&logoColor=white)
 ![ESLint version](https://img.shields.io/badge/ESLint-9.17.0-4B32C3?logo=eslint&logoColor=white)
 ![Prettier version](https://img.shields.io/badge/Prettier-3.3.2-F7B93E?logo=prettier&logoColor=white)
 ![PWA Support](https://img.shields.io/badge/PWA-support-4FC08D?logo=pwa&logoColor=white)
