@@ -1,5 +1,5 @@
 {
-    "homepage": "https://ganemedelabs.github.io/react-template/",
+    "homepage": "/react-template/",
     "name": "react-template",
     "author": "ganemedelabs",
     "description": "A React template built with Create React App (CRA), featuring TypeScript, TailwindCSS, ESLint, Prettier, Docker, PWA (Workbox), and GitHub Pages deployment configured to support BrowserRouter.",
@@ -30,24 +30,24 @@
         "url": "https://github.com/ganemedelabs/react-template/issues"
     },
     "dependencies": {
-        "react-router-dom": "^6.21.1"
+        "react-router-dom": "^7.1.0"
     },
     "devDependencies": {
         "@eslint/compat": "^1.2.4",
         "@eslint/js": "^9.6.0",
-        "@testing-library/jest-dom": "^5.17.0",
-        "@testing-library/react": "^13.4.0",
-        "@testing-library/user-event": "^13.5.0",
+        "@testing-library/jest-dom": "^6.6.3",
+        "@testing-library/react": "^16.1.0",
+        "@testing-library/user-event": "^14.5.2",
         "@types/jest": "^29.5.12",
-        "@types/node": "^20.14.2",
-        "@types/react": "^18.3.3",
-        "@types/react-dom": "^18.3.0",
-        "@typescript-eslint/eslint-plugin": "^7.15.0",
-        "@typescript-eslint/parser": "^7.15.0",
+        "@types/node": "^22.10.2",
+        "@types/react": "^19.0.2",
+        "@types/react-dom": "^19.0.2",
+        "@typescript-eslint/eslint-plugin": "^8.18.1",
+        "@typescript-eslint/parser": "^8.18.1",
         "autoprefixer": "^10.4.19",
         "eslint": "^9.17.0",
-        "eslint-config-airbnb": "^19.0.4",
         "eslint-config-prettier": "^9.1.0",
+        "eslint-config-react-app": "^7.0.1",
         "eslint-plugin-import": "^2.29.1",
         "eslint-plugin-jsx-a11y": "^6.9.0",
         "eslint-plugin-prettier": "^5.1.3",
@@ -57,11 +57,12 @@
         "postcss": "^8.4.39",
         "prettier": "^3.3.2",
         "prettier-plugin-tailwindcss": "^0.6.5",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
         "react-scripts": "^5.0.1",
         "tailwindcss": "^3.4.10",
-        "typescript": "^5.5.3",
+        "typescript": "^5.7.2",
+        "typescript-eslint": "^8.7.0",
         "workbox-core": "^7.1.0",
         "workbox-expiration": "^7.1.0",
         "workbox-precaching": "^7.1.0",
@@ -79,6 +80,9 @@
         "lint:fix": "eslint --fix .",
         "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,html,css,md}'",
         "coverage": "npm test --coverage --watchAll --collectCoverageFrom='src/**/*.{js,ts,jsx,tsx}'"
+    },
+    "overrides": {
+        "eslint": "^9.17.0"
     },
     "eslintConfig": {
         "extends": [

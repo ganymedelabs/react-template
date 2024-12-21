@@ -1,10 +1,10 @@
 # React Template with TypeScript, TailwindCSS, ESLint, Prettier, Docker, and PWA Support
 
-![React version](https://img.shields.io/badge/React-18.3.1-61DAFB?logo=react&logoColor=white)
+![React version](https://img.shields.io/badge/React-19.0.0-61DAFB?logo=react&logoColor=white)
 ![React Scripts version](https://img.shields.io/badge/React%20Scripts-5.0.1-09D3AE?logo=create-react-app&logoColor=white)
 ![TailwindCSS version](https://img.shields.io/badge/TailwindCSS-3.4.10-06B6D4?logo=tailwindcss&logoColor=white)
-![TypeScript version](https://img.shields.io/badge/TypeScript-5.5.3-3178C6?logo=typescript&logoColor=white)
-![ESLint version](https://img.shields.io/badge/ESLint-8.57.0-4B32C3?logo=eslint&logoColor=white)
+![TypeScript version](https://img.shields.io/badge/TypeScript-4.9.5-3178C6?logo=typescript&logoColor=white)
+![ESLint version](https://img.shields.io/badge/ESLint-9.17.0-4B32C3?logo=eslint&logoColor=white)
 ![Prettier version](https://img.shields.io/badge/Prettier-3.3.2-F7B93E?logo=prettier&logoColor=white)
 ![PWA Support](https://img.shields.io/badge/PWA-support-4FC08D?logo=pwa&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-available-2496ED?logo=docker&logoColor=white)
@@ -15,24 +15,24 @@ This is a React template created with Create React App (CRA) and configured with
 
 ## Table of Contents
 
--   [Getting Started](#-getting-started)
--   [TypeScript Configuration](#-typescript-configuration)
--   [TailwindCSS Configuration](#-tailwindcss-configuration)
--   [ESLint Configuration](#-eslint-configuration)
--   [Prettier Configuration](#-prettier-configuration)
--   [Docker Configuration](#-docker-configuration)
--   [PWA Configuration](#-pwa-configuration)
--   [GitHub Pages Deployment](#-github-pages-deployment)
--   [Repository Configuration](#-repository-configuration)
--   [License](#-license)
+- [Getting Started](#-getting-started)
+- [TypeScript Configuration](#-typescript-configuration)
+- [TailwindCSS Configuration](#-tailwindcss-configuration)
+- [ESLint Configuration](#-eslint-configuration)
+- [Prettier Configuration](#-prettier-configuration)
+- [Docker Configuration](#-docker-configuration)
+- [PWA Configuration](#-pwa-configuration)
+- [GitHub Pages Deployment](#-github-pages-deployment)
+- [Repository Configuration](#-repository-configuration)
+- [License](#-license)
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
--   Node.js (>= 12.x)
--   npm or yarn
--   Docker (optional, for containerization)
+- Node.js (>= 12.x)
+- npm or yarn
+- Docker (optional, for containerization)
 
 ### Installation
 
@@ -79,16 +79,16 @@ This template uses TypeScript for static type-checking and ensuring type safety.
 >     ```bash
 >     npm uninstall typescript @types/react @types/react-dom @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser
 >     ```
-> 4. Remove TypeScript from the `"overrides"` field in `package.json`:
->     ```json
->     "overrides": {
->         "typescript": "^5.5.3"
->     }
->     ```
-> 5. Remove TypeScript references from the `"plugins"` and `"extends"` fields in the `.eslintrc` configuration:
->     ```json
->     "plugins": ["@typescript-eslint"],
->     "extends": ["plugin:@typescript-eslint/recommended"]
+> 4. Remove TypeScript references from the `fixupConfigRules` and `plugins` fields in the `eslint.config.mjs` configuration:
+>     ```mjs
+>     export default [
+>         ...fixupConfigRules(compat.extends("plugin:@typescript-eslint/recommended")),
+>         {
+>             plugins: {
+>                 "@typescript-eslint": fixupPluginRules(typescriptEslint),
+>             },
+>         },
+>     ];
 >     ```
 
 ## 🎨 TailwindCSS Configuration
@@ -128,31 +128,33 @@ TailwindCSS is used for utility-first styling. It is configured with Just-in-Tim
 
 This project uses the following ESLint configurations:
 
--   `eslint:recommended`
--   `plugin:react/recommended`
--   `plugin:react-hooks/recommended`
--   `plugin:@typescript-eslint/recommended`
--   `airbnb`
--   `plugin:import/errors`
--   `plugin:jsx-a11y/recommended`
--   `plugin:prettier/recommended`
+- `eslint:recommended`
+- `plugin:react/recommended`
+- `plugin:react-hooks/recommended`
+- `plugin:@typescript-eslint/recommended`
+- `plugin:import/errors`
+- `plugin:jsx-a11y/recommended`
+- `plugin:prettier/recommended`
 
-You can find the ESLint configuration in the `.eslintrc` file.
+You can find the ESLint configuration in the `eslint.config.mjs` file.
 
 > [!CAUTION]
 >
 > ### Removing ESLint
 >
-> 1. Delete the `.eslintrc` and `.eslintignore` files.
+> 1. Delete the `eslint.config.mjs` file.
 > 2. Uninstall ESLint and associated plugins:
 >     ```bash
->     npm uninstall eslint @eslint/js @typescript-eslint/parser eslint-config-airbnb eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks
+>     npm uninstall eslint @eslint/js @typescript-eslint/parser eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks
 >     ```
-> 3. Remove the `"lint"` and `"lint:fix"` scripts, along with the `"eslintConfig"` field from `package.json`:
+> 3. Remove the `"lint"` and `"lint:fix"` scripts, along with the `"eslintConfig"` and `overrides.eslint` fields from `package.json`:
 >     ```json
 >     "scripts": {
 >         "lint": "eslint .",
 >         "lint:fix": "eslint --fix ."
+>     },
+>     "overrides": {
+>       "eslint": "^9.17.0"
 >     },
 >     "eslintConfig": {
 >         "extends": [
@@ -170,21 +172,28 @@ Prettier is used for code formatting. You can find the configuration in the `.pr
 >
 > ### Removing Prettier
 >
-> 1. Delete the `.prettierrc` and `.prettierignore` files.
-> 2. Uninstall Prettier and related plugins:
+> 1.  Delete the `.prettierrc` and `.prettierignore` files.
+> 2.  Uninstall Prettier and related plugins:
 >     ```bash
 >     npm uninstall prettier eslint-plugin-prettier
 >     ```
-> 3. Remove the `"format"` script from `package.json`:
+> 3.  Remove the `"format"` script from `package.json`:
 >     ```json
 >     "scripts": {
 >         "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,html,css,md}'"
 >     }
 >     ```
-> 4. Remove Prettier references from the `"plugins"` and `"extends"` fields in the `.eslintrc` configuration:
->     ```json
->     "plugins": ["prettier"],
->     "extends": ["plugin:prettier/recommended"]
+> 4.  Remove Prettier references from the `fixupConfigRules` and `plugins` fields in the `eslint.config.mjs` configuration:
+>
+>     ```mjs
+>     export default [
+>         ...fixupConfigRules(compat.extends("plugin:prettier/recommended")),
+>         {
+>             plugins: {
+>                 prettier: fixupPluginRules(prettier),
+>             },
+>         },
+>     ];
 >     ```
 
 ## 🐳 Docker Configuration

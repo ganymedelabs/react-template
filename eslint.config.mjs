@@ -11,8 +11,8 @@ import { fileURLToPath } from "node:url";
 import js from "@eslint/js";
 import { FlatCompat } from "@eslint/eslintrc";
 
-const __filename = fileURLToPath(import.meta.url); // eslint-disable-line no-underscore-dangle
-const __dirname = path.dirname(__filename); // eslint-disable-line no-underscore-dangle
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({
     baseDirectory: __dirname,
     recommendedConfig: js.configs.recommended,
@@ -36,7 +36,6 @@ export default [
             "plugin:react/recommended",
             "plugin:react-hooks/recommended",
             "plugin:@typescript-eslint/recommended",
-            "airbnb",
             "plugin:import/errors",
             "plugin:jsx-a11y/recommended",
             "plugin:prettier/recommended"

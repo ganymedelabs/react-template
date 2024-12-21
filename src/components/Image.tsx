@@ -1,7 +1,5 @@
 import React from "react";
 
-/* eslint-disable react/jsx-props-no-spreading, react/require-default-props */
-
 interface ImageProps {
     className?: string;
     src: string;

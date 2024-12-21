@@ -10,7 +10,7 @@ function registerValidSW(swUrl, config) {
         .register(swUrl)
         .then((registration) => {
             // When an update is found
-            // eslint-disable-next-line no-param-reassign
+
             registration.onupdatefound = () => {
                 const installingWorker = registration.installing;
                 if (installingWorker == null) {
