@@ -15,10 +15,10 @@ export default function Home(): React.JSX.Element {
                 />
                 <h1 className="text-center">React Template</h1>
                 <p className="text-center text-lg">
-                    Created by <a href="https://github.com/ganymedelabs">Discontinued Labs</a>
+                    Created by <a href="https://github.com/ganemedelabs">Discontinued Labs</a>
                 </p>
                 <p className="text-center text-sm">
-                    <a href="https://github.com/ganymedelabs/react-template">View on GitHub</a>
+                    <a href="https://github.com/ganemedelabs/react-template">View on GitHub</a>
                 </p>
             </div>
         </div>

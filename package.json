@@ -1,14 +1,14 @@
 {
-    "homepage": "https://ganymedelabs.github.io/react-template/",
+    "homepage": "https://ganemedelabs.github.io/react-template/",
     "name": "react-template",
-    "author": "ganymedelabs",
+    "author": "ganemedelabs",
     "description": "A React template built with Create React App (CRA), featuring TypeScript, TailwindCSS, ESLint, Prettier, Docker, PWA (Workbox), and GitHub Pages deployment configured to support BrowserRouter.",
     "license": "MIT",
     "version": "1.0.0",
     "private": true,
     "repository": {
         "type": "git",
-        "url": "https://github.com/ganymedelabs/react-template.git"
+        "url": "https://github.com/ganemedelabs/react-template.git"
     },
     "keywords": [
         "PWA",
@@ -27,12 +27,13 @@
         "Template"
     ],
     "bugs": {
-        "url": "https://github.com/ganymedelabs/react-template/issues"
+        "url": "https://github.com/ganemedelabs/react-template/issues"
     },
     "dependencies": {
         "react-router-dom": "^6.21.1"
     },
     "devDependencies": {
+        "@eslint/compat": "^1.2.4",
         "@eslint/js": "^9.6.0",
         "@testing-library/jest-dom": "^5.17.0",
         "@testing-library/react": "^13.4.0",
@@ -44,14 +45,14 @@
         "@typescript-eslint/eslint-plugin": "^7.15.0",
         "@typescript-eslint/parser": "^7.15.0",
         "autoprefixer": "^10.4.19",
-        "eslint": "^8.57.0",
+        "eslint": "^8.57.1",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-import": "^2.29.1",
         "eslint-plugin-jsx-a11y": "^6.9.0",
         "eslint-plugin-prettier": "^5.1.3",
         "eslint-plugin-react": "^7.34.3",
-        "eslint-plugin-react-hooks": "^4.6.2",
+        "eslint-plugin-react-hooks": "^5.1.0",
         "gh-pages": "^6.1.1",
         "postcss": "^8.4.39",
         "prettier": "^3.3.2",
