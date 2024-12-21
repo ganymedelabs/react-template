@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "../components/Image.tsx";
 
-/* eslint-disable prettier/prettier */
-
 export default function Home(): React.JSX.Element {
     return (
         <div className="relative flex h-screen items-center justify-center font-sans">
@@ -11,11 +9,11 @@ export default function Home(): React.JSX.Element {
                 <Image
                     className="ml-auto mr-auto block h-48 w-48 animate-spin-infinite"
                     src={`${process.env.PUBLIC_URL}/images/logo.png`}
-                    alt="Discontinued Labs Logo"
+                    alt="Ganemede Labs Logo"
                 />
                 <h1 className="text-center">React Template</h1>
                 <p className="text-center text-lg">
-                    Created by <a href="https://github.com/ganemedelabs">Discontinued Labs</a>
+                    Created by <a href="https://github.com/ganemedelabs">Ganemede Labs</a>
                 </p>
                 <p className="text-center text-sm">
                     <a href="https://github.com/ganemedelabs/react-template">View on GitHub</a>

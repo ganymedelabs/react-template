@@ -13,8 +13,8 @@
 /dev-dist
 
 # misc
-.vscode/
+/.vscode
 .env.local
 .DS_Store
 npm-debug.log*
-package-lock.json
+/package-lock.json

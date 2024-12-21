@@ -10,7 +10,7 @@ export default function NotFoundPage(): React.JSX.Element {
                 <Image
                     className="ml-auto mr-auto block h-48 w-48"
                     src={`${process.env.PUBLIC_URL}/images/logo.png`}
-                    alt="Discontinued Labs Logo"
+                    alt="Ganemede Labs Logo"
                 />
                 <h1 className="text-center">Not Found!</h1>
                 <p className="text-center">
